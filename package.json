@@ -2,7 +2,7 @@
   "name": "learnhub",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/olamoyegunabdulsalam/LearnHub.git",
+  "homepage": "https://olamoyegunabdulsalam.github.io/LearnHub",
   "type": "module",
   "scripts": {
     "dev": "vite",
