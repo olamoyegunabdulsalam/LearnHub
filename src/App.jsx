@@ -6,6 +6,8 @@ import { pdfList } from "./data/pdf";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import UploadModal from "./components/UploadModal";
+import ThemeToggle from "./components/ThemeToggle";
+
 
 function App() {
   const [page, setPage] = useState("login");
@@ -80,7 +82,7 @@ function App() {
 
       {/* DASHBOARD ONLY AFTER LOGIN */}
       {loggedIn && (
-        <div className="w-full bg-gray-100 text-black transition-colors duration-500">
+        <div className="w-full bg-gray-100 dark:bg-gray-900 text-black transition-colors duration-500">
           <Header
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
@@ -103,7 +105,7 @@ function App() {
               addUpload={addUpload}
             />
           )}
-
+          <ThemeToggle />
           <CourseList
             courses={filteredCourses}
             favorites={favorites}
