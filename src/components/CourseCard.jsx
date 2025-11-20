@@ -12,15 +12,15 @@ function CourseCard({
   const downloadLink = fileUrl || pdfUrl;
   const displayImage = image || "https://img.icons8.com/ios-filled/100/000000/pdf.png";
   return (
-    <div className="bg-white  rounded-lg shadow-md hover:shadow-lg transition overflow-hidden">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition overflow-hidden">
       <img className="w-full h-40 object-cover" src={image} alt={courseTitle} />
 
       <div className="p-4">
-        <h2 className="text-xl font-semibold mb-2 text-gray-800">
+        <h2 className=" dark:text-white text-xl font-semibold mb-2 text-gray-800">
           {courseCode}
         </h2>
-        <p className="text-gray-600 mb-1">{courseTitle}</p>
-        <p className="text-gray-500 text-sm mb-3">
+        <p className=" dark:text-white text-gray-600 mb-1">{courseTitle}</p>
+        <p className=" dark:text-white text-gray-500 text-sm mb-3">
           <strong>Lecturer:</strong> {lecturer}
         </p>
       </div>

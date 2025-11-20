@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Add this line to enable class-based dark mode */
+@variant dark (&:where(.dark, .dark *));
+
 @keyframes fadeInOut {
   0% { opacity: 0; transform: translateY(10px); }
   10%, 90% { opacity: 1; transform: translateY(0); }
