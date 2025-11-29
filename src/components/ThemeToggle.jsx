@@ -33,7 +33,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed rounded-2xl left-5 mt-5 top-18 z-50 px-3 cursor-pointer py-2 text-white dark:bg-gray-700 bg-purple-500 shadow-md shadow-purple-800 dark:text-white rounded"
+      className="fixed rounded-2xl right-5 mt-5 bottom-18 z-50 px-3 cursor-pointer py-2 text-white dark:bg-gray-700 bg-purple-500 shadow-md shadow-purple-800 dark:text-white rounded"
     >
       {isDark ? (
         <i className="fa-solid fa-sun"></i> 

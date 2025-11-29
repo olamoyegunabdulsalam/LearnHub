@@ -48,7 +48,7 @@ const CourseList = ({ courses, searchTerm, setSearchTerm }) => {
         <div
           className="
   fixed top-5 left-1/2 -translate-x-1/2 z-30
-  w-[90%] max-w-sm
+  w-[70%] max-w-sm
   px-4 py-3 rounded-lg shadow-xl
   bg-green-600 text-white font-bold text-center
   transition-all duration-300 transform
