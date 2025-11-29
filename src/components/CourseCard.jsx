@@ -10,22 +10,23 @@ function CourseCard({
   image,
 }) {
   const downloadLink = fileUrl || pdfUrl;
-  const displayImage = image || "https://img.icons8.com/ios-filled/100/000000/pdf.png";
+  const displayImage =
+    image || "https://img.icons8.com/ios-filled/100/000000/pdf.png";
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition overflow-hidden">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition overflow-hidden max-w-sm w-full mx-auto">
       <img className="w-full h-40 object-cover" src={image} alt={courseTitle} />
 
       <div className="p-4">
-        <h2 className=" dark:text-white text-xl font-semibold mb-2 text-gray-800">
+        <h2 className="dark:text-white text-xl font-semibold mb-2 text-gray-800">
           {courseCode}
         </h2>
-        <p className=" dark:text-white text-gray-600 mb-1">{courseTitle}</p>
-        <p className=" dark:text-white text-gray-500 text-sm mb-3">
+        <p className="dark:text-white text-gray-600 mb-1">{courseTitle}</p>
+        <p className="dark:text-white text-gray-500 text-sm mb-3">
           <strong>Lecturer:</strong> {lecturer}
         </p>
       </div>
 
-      <div className="flex gap-3 justify-center pb-4">
+      <div className="flex flex-wrap gap-3 justify-center pb-4 px-3">
         <button
           className="bg-purple-700 cursor-pointer text-white px-5 py-2 rounded hover:bg-purple-600 flex items-center gap-2 transition"
           onClick={onPreview}

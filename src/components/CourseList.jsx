@@ -25,9 +25,7 @@ const CourseList = ({ courses, searchTerm, setSearchTerm }) => {
         : [...prev, course];
 
       setToastMessage(
-        `${course.courseTitle} ${
-          isFav ? "removed from" : "added to"
-        } favorites!`
+        `${course.courseCode} ${isFav ? "removed from" : "added to"} favorites!`
       );
       setShowToast(true);
 
@@ -47,7 +45,16 @@ const CourseList = ({ courses, searchTerm, setSearchTerm }) => {
   return (
     <div>
       {showToast && (
-        <div className="d-flex justify-center z-30 fixed font-bold left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-3 rounded-lg shadow-xl transition-all duration-300 animate-fade-in-out">
+        <div
+          className="
+  fixed top-5 left-1/2 -translate-x-1/2 z-30
+  w-[90%] max-w-sm
+  px-4 py-3 rounded-lg shadow-xl
+  bg-green-600 text-white font-bold text-center
+  transition-all duration-300 transform
+  animate-fade-in-out
+"
+        >
           {toastMessage}
         </div>
       )}
@@ -57,12 +64,20 @@ const CourseList = ({ courses, searchTerm, setSearchTerm }) => {
           placeholder="Search for a course..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-100 p-5 bg-white mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none placeholder-gray-400 shadow-sm transition placeholder:italic"
+          className="
+  w-[85%] sm:w-[70%] md:w-[60%] lg:w-[45%]
+  mx-auto
+  p-5 bg-white mb-4
+  border border-gray-300 rounded-lg
+  focus:ring-2 focus:ring-purple-500
+  outline-none placeholder-gray-400
+  shadow-sm transition placeholder:italic
+"
         />
       </div>
 
       {filteredCourses.length > 0 ? (
-        <div className="p-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="p-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredCourses.map((course) => {
             const isFav = favorites.some((f) => f.id === course.id);
             return (

@@ -9,16 +9,18 @@ function Alert({ message, type, show }) {
   return (
     <div
       className={`
-        absolute 
-        left-1/2 -translate-x-1/2 
-        top-4
-        w-[90%] max-w-sm
-        px-4 py-2 rounded-md 
-        shadow-md text-sm font-medium
-        transition-all duration-300
-        ${show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"}
-        ${colors[type]}
-      `}
+  fixed z-20
+  top-5 right-5
+  w-full max-w-xs sm:max-w-sm md:max-w-md
+
+  px-4 py-3 rounded-lg shadow-lg border
+  text-sm font-medium
+
+  transition-all duration-300 ease-out transform
+  ${show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-5"}
+
+  ${colors[type]}
+`}
     >
       {message}
     </div>
